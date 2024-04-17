@@ -20,7 +20,7 @@ class BatteryDisplay {
     async render() {
         let battery = await this.getBattery()
 
-        this.element.textContent = battery.isFull ? "Battery full" : [
+        this.element.textContent = battery.isFull ? "Fully Sane" : [
             this.getPercentMessage(battery),
             this.getChargingMessage(battery),
             this.getTimeMessage(battery)
@@ -28,21 +28,21 @@ class BatteryDisplay {
     }
 
     getPercentMessage(battery) {
-        return `Battery: ${Math.round(battery.level * 100)}%`
+        return `Sanity: ${Math.round(battery.level * 100)}%`
     }
 
     getChargingMessage(battery) {
-        return battery.charging ? "Charging" : "Not charging"
+        return battery.charging ? "Geting sanity" : "Going insane"
     }
 
     getTimeMessage(battery) {
-        let direction = battery.charging ? "full" : "empty"
+        let direction = battery.charging ? "sane" : "insane"
 
         let hoursLeft = Math.floor(battery.secsLeft / 3600)
         let minsLeft = Math.floor(battery.secsLeft % 3600 / 60);
         minsLeft = String(minsLeft).padStart(2, 0) // 8:9 to 8:09 etc
 
-        return `Around ${hoursLeft}:${minsLeft} until ${direction}`
+        return `You have ${hoursLeft}:${minsLeft} until your ${direction}`
     }
 
     async listenForUpdates() {
