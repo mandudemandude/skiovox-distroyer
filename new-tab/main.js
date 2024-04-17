@@ -49,7 +49,7 @@ settings.addEventListener('click', () => {
 })
 
 theme.addEventListener('click', () => {
-    alert("The original New Tab page will now open. On that page, click the edit icon in the bottom right corner to edit your browser theme.")
+    alert("Why")
     chrome.tabs.create({ url: NEW_TAB_URL })
 })
 
