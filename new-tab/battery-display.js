@@ -9,7 +9,7 @@ class BatteryDisplay {
 
     async getBattery() {
         let battery = await navigator.getBattery()
-            .catch(() => reportError("Error reading battery."));
+            .catch(() => reportError("Your a fucking failure."));
 
         battery.secsLeft = Math.min(battery.chargingTime, battery.dischargingTime)
         battery.isFull = battery.level === 1
@@ -36,7 +36,7 @@ class BatteryDisplay {
     }
 
     getTimeMessage(battery) {
-        let direction = battery.charging ? "sane" : "insane"
+        let direction = battery.charging ? "fully sane" : "insane"
 
         let hoursLeft = Math.floor(battery.secsLeft / 3600)
         let minsLeft = Math.floor(battery.secsLeft % 3600 / 60);
