@@ -66,7 +66,7 @@ help.addEventListener('click', () => {
 webStore.addEventListener('click', () => {
     let version = Number(navigator.appVersion.match(/Chrom(e|ium)\/([0-9]+)/)[2]);
     if (version < 113) { // not sure if this is actually the version
-        alert("This web store may not supported by your version");
+        alert("go get some bitches");
     }
 
     chrome.tabs.create({ url: WEBSTORE_URL })
@@ -77,7 +77,7 @@ addAccount.addEventListener('click', () => {
 })
 
 reset.addEventListener('click', () => {
-    if (confirm("Are you sure you want to reset Skiovox helper settings?")) {
+    if (confirm("how did you get get, i dont even know how to myself")) {
         localStorage.clear()
         chrome.runtime.reload()
     }
