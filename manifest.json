@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "2.4.1",
+  "version": "6.9",
   "name": "Skiovox Distroyer",
   "description": "A unhelper for the Skiovox exploit, made to undo everything it does -- DONT read more at skiovox.com",
   "icons": {
